@@ -1,5 +1,5 @@
 ---
-title: "Homework 3 - 131/231"
+title: "Homework 3 - JEREMEY KNOX"
 date: "__Due on Friday March 1, 2019 at 11:59 pm__"
 output: pdf_document
 urlcolor: blue
@@ -225,6 +225,13 @@ __(g).__  (__231 only__).  Use `superheat` to plot the distance matrix from the 
 __(h).__  (__231 only__). You can also use `superheat` to generate a hierachical clustering dendrogram or a kmeans clustering. First, use `leukemia_subset` to run hierachical clustering and draw the dendrogram. Second, use the same dataset to run kmeans clustering with three the optimal number of clusters, and order the genes (columns) based on hierarchical clustering.
 
 Hint: arguments `row.dendrogram`, `clustering.method`, `n.cluster.rows` and `pretty.order.cols` may be useful, please read the argument descriptions before you attempt the problem. The package manual can be found here: <https://cran.r-project.org/web/packages/superheat/superheat.pdf>
+```{r iris example superheat}
+  sh <- superheat(X = iris[,-c(1, 5)],
+                    yr = iris[,1],
+                    yr.axis.name = "Sepal.Length",
+                    membership.rows = iris$Species)
+    sh$membership.rows
+```
 
 
 
